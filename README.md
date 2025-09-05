@@ -1,1 +1,2 @@
 # quanlybarter
+add redmine
