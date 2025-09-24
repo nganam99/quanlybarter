@@ -43,8 +43,7 @@ def delay_step(seconds=2):
     time.sleep(seconds)
 
 # --- KHỞI TẠO TRÌNH DUYỆT ---
-service = Service(r"C:\Users\ngavt\Documents\AUTO TEST\BARTER\chromedriver.exe")
-driver = webdriver.Chrome(service=service)
+driver = webdriver.Chrome()  # không cần chỉ đường dẫn
 driver.maximize_window()
 
 # URL của trang đích, hệ thống thường sẽ tự chuyển đến trang đăng nhập nếu chưa có phiên làm việc
@@ -126,11 +125,11 @@ try:
     so_lan_nhan_hang.send_keys("3")
     delay_step()
 
-    loai_nhan = wait.until(EC.element_to_be_clickable((By.ID, "ToTrinh_LoaiNhan")))
-    driver.execute_script("arguments[0].scrollIntoView(true);", loai_nhan)
-    loai_nhan.clear()
-    loai_nhan.send_keys("Đồ uống")
-    delay_step()
+    # loai_nhan = wait.until(EC.element_to_be_clickable((By.ID, "ToTrinh_LoaiNhan")))
+    # driver.execute_script("arguments[0].scrollIntoView(true);", loai_nhan)
+    # loai_nhan.clear()
+    # loai_nhan.send_keys("Đồ uống")
+    # delay_step()
 
     phu_trach_dau_ra = wait.until(EC.element_to_be_clickable((By.ID, "ToTrinh_NhanSuPhuTrach")))
     driver.execute_script("arguments[0].scrollIntoView(true);", phu_trach_dau_ra)
@@ -158,7 +157,7 @@ try:
     # Chờ trường input file xuất hiện và upload
     file_input = wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, "input[type='file'][name='f_upload_normal']")))
     driver.execute_script("arguments[0].scrollIntoView(true);", file_input)
-    file_path = "C:\\Users\\ngavt\\Downloads\\JPG File (.jpg)"
+    file_path = r"C:\Users\ngavt\Downloads\BaoGiaHaiAnh.jpg"  # Sửa lại thành raw string
     file_input.send_keys(file_path)
     print(f"Đã chọn file '{file_path}' để upload.")
     delay_step()
