@@ -93,15 +93,15 @@ try:
     
     # --- Xử lý các dropdown <ng-select> ---
     delay_step()
-    handle_custom_dropdown(driver,wait, "nguoiDeXuat_Ref", "Nguyễn")
+    handle_custom_dropdown(driver, wait, "createoredittotrinhmodal", "nguoiDeXuat_Ref", "Nguyễn")
     delay_step()
-    handle_custom_dropdown(driver,wait, "boPhanDeXuat_Ref", "ASD")
+    handle_custom_dropdown(driver, wait, "createoredittotrinhmodal", "boPhanDeXuat_Ref", "ASD")
     delay_step()
-    handle_custom_dropdown(driver,wait, "nhanHang_Ref", "Milo")
+    handle_custom_dropdown(driver, wait, "createoredittotrinhmodal", "nhanHang_Ref", "Milo")
     delay_step()
-    handle_custom_dropdown(driver,wait, "khachHang_Ref", "Milo cafe")
+    handle_custom_dropdown(driver, wait, "createoredittotrinhmodal", "khachHang_Ref", "Milo cafe")
     delay_step()
-    handle_custom_dropdown(driver,wait, "benChiuPhiVanChuyen_Ref", "Khách hàng")
+    handle_custom_dropdown(driver, wait, "createoredittotrinhmodal", "benChiuPhiVanChuyen_Ref", "Khách hàng")
     delay_step()
 
     # --- Điền các trường văn bản, số và ngày tháng ---
